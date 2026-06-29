@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>美國租車完全手冊 — 鳳凰城機場 (PHX) 新手版</title>
+<style>
+:root{
+  --bg:#ffffff; --surface:#faf8f4; --surface2:#f1ece3;
+  --text:#1f2328; --soft:#4a4f55; --mute:#7a8088;
+  --border:#e6e0d6; --rule:#c9a227;
+  --accent:#9a3412; --accent-soft:#fdecdf;
+  --good:#15803d; --warn:#b45309; --bad:#991b1b;
+  --warn-bg:#fef6e7; --bad-bg:#fdeaea; --good-bg:#eaf6ee;
+}
+[data-theme="dark"]{
+  --bg:#15120e; --surface:#1e1a15; --surface2:#272118;
+  --text:#f3ece2; --soft:#cabfb0; --mute:#9a8f80;
+  --border:#352c20; --rule:#d4a946;
+  --accent:#f97316; --accent-soft:#3a2414;
+  --good:#4ade80; --warn:#fbbf24; --bad:#f87171;
+  --warn-bg:#2d2410; --bad-bg:#311616; --good-bg:#13241a;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);
+  font-family:-apple-system,"PingFang TC","Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif;
+  line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased}
+.wrap{max-width:880px;margin:0 auto;padding:0 22px 80px}
+.theme-toggle{position:fixed;top:14px;right:14px;z-index:100;background:var(--surface2);
+  border:1px solid var(--border);border-radius:8px;padding:7px 13px;cursor:pointer;
+  color:var(--text);font-size:13px}
+.theme-toggle:hover{border-color:var(--accent)}
+header{padding:40px 0 18px;border-bottom:2px solid var(--text);margin-bottom:8px}
+.eyebrow{font-size:12px;letter-spacing:.18em;color:var(--mute);text-transform:uppercase;margin-bottom:10px}
+h1{font-family:Georgia,"Noto Serif TC",serif;font-size:32px;line-height:1.2;margin:0 0 12px;font-weight:700}
+.meta{font-size:13.5px;color:var(--soft)}
+.lead{font-size:16.5px;color:var(--soft)}
+h2{font-family:Georgia,"Noto Serif TC",serif;font-size:22px;margin:46px 0 6px;padding-bottom:8px;
+  border-bottom:1px solid var(--border)}
+h2 .n{color:var(--rule);font-size:15px;margin-right:8px;font-family:Georgia,serif}
+h3{font-size:16.5px;margin:24px 0 4px;color:var(--accent)}
+p{margin:10px 0}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--rule)}
+a:hover{background:var(--accent-soft)}
+ul,ol{margin:10px 0;padding-left:24px}
+li{margin:6px 0}
+strong{color:var(--text)}
+.callout{border-left:4px solid var(--accent);background:var(--surface);
+  padding:13px 16px;border-radius:0 8px 8px 0;margin:16px 0;font-size:14.5px}
+.warn{border-left:4px solid var(--warn);background:var(--warn-bg)}
+.bad{border-left:4px solid var(--bad);background:var(--bad-bg)}
+.good{border-left:4px solid var(--good);background:var(--good-bg)}
+.callout .tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.05em;
+  text-transform:uppercase;margin-bottom:4px}
+.warn .tag{color:var(--warn)} .bad .tag{color:var(--bad)} .good .tag{color:var(--good)}
+.callout .tag.acc{color:var(--accent)}
+.step{display:grid;grid-template-columns:38px 1fr;gap:14px;margin:16px 0;align-items:start}
+.step .dot{width:30px;height:30px;border-radius:50%;background:var(--accent);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;
+  font-family:Georgia,serif;flex-shrink:0}
+.step .body{padding-top:2px}
+.step .body b{display:block;margin-bottom:2px;font-size:15.5px}
+.step .body .hint{font-size:13px;color:var(--mute)}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{text-align:left;padding:9px 11px;border-bottom:1px solid var(--border);vertical-align:top}
+th{background:var(--surface2);font-size:12.5px;letter-spacing:.03em;color:var(--soft)}
+.chk{list-style:none;padding-left:0}
+.chk li{padding-left:26px;position:relative}
+.chk li:before{content:"☐";position:absolute;left:0;color:var(--accent);font-size:15px}
+.qa{border:1px solid var(--border);border-radius:10px;padding:6px 16px;margin:12px 0;background:var(--surface)}
+.qa .q{font-weight:700;color:var(--accent);margin:10px 0 2px}
+.qa .a{margin:2px 0 12px;font-size:14.5px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}
+.card{border:1px solid var(--border);border-radius:10px;padding:14px 16px;background:var(--surface)}
+.card h4{margin:0 0 6px;font-size:15px}
+.small{font-size:12.5px;color:var(--mute)}
+footer{margin-top:50px;padding-top:16px;border-top:1px solid var(--border);font-size:12.5px;color:var(--mute)}
+@media (max-width:560px){.grid2{grid-template-columns:1fr}h1{font-size:25px}}
+@media print{.theme-toggle{display:none}}
+</style>
+</head>
+<body data-theme="light">
+<button class="theme-toggle" onclick="document.body.dataset.theme = document.body.dataset.theme === 'dark' ? 'light' : 'dark'">🌓 切換主題</button>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow">第一次在美國租車 · 鳳凰城機場 PHX · 台灣駕駛人</div>
+  <h1>美國租車完全手冊（新手版）</h1>
+  <div class="meta">六個階段：<b>出發前準備 → 線上預訂 → 看懂保險 → 機場取車 → 開車途中 → 還車</b></div>
+</header>
+
+<p style="margin:16px 0 0"><a href="index.html" style="display:inline-block;background:var(--surface2);color:var(--text);border:1px solid var(--border);border-radius:8px;padding:9px 15px;font-size:14px;text-decoration:none">← 回行程指南（大峽谷 · 羚羊谷 · 馬蹄灣）</a></p>
+
+<p class="lead">在美國租車本身不難，新手真正會卡關的是三件事：<strong>① 證件不齊被拒租、② 保險不知道怎麼選、③ 加油機刷外國卡刷不過</strong>。這份手冊把每一步拆開講，照著做就不會出錯。最容易踩的雷集中在最後一節，先看一眼。</p>
+
+<div class="callout bad">
+  <span class="tag">⚠️ 出發前一定要先辦：國際駕照</span>
+  台灣駕照不是全英文，租車公司會要求<strong>「台灣駕照正本 + 國際駕照 IDP」兩者一起出示</strong>。國際駕照到任一<strong>監理站</strong>當場辦（帶身分證、台灣駕照、2 吋照片、規費約 NT$250），當天拿。<strong>沒帶可能直接被拒租</strong>，務必出發前辦好。
+</div>
+
+<h2><span class="n">①</span>出發前準備（建議出發前 4–8 週）</h2>
+<p>租車要備齊的「三證一卡」，缺一不可：</p>
+<ul class="chk">
+  <li><strong>台灣駕照正本</strong>（普通小型車即可，別只帶影本）</li>
+  <li><strong>國際駕照 IDP</strong>（監理站辦，與台灣駕照一起用才有效）</li>
+  <li><strong>護照</strong>（櫃台常會核對身分）</li>
+  <li><strong>本人名字的信用卡</strong>（實體卡，不能用別人的；用來刷「押金預授權」，見下方說明）</li>
+</ul>
+
+<div class="callout warn">
+  <span class="tag">押金 / 年齡 / 卡別 三個容易忽略的點</span>
+  <ul style="margin:6px 0">
+    <li><strong>押金（hold）：</strong>取車時信用卡會被「<strong>預授權凍結</strong>」一筆約 US$200–500（不是真的扣款，還車無糾紛後解凍）。卡片額度要留夠。</li>
+    <li><strong>年齡：</strong>滿 <strong>25 歲</strong>免「年輕駕駛附加費」；21–24 歲每天多收約 $25–35；未滿 21 多數不能租。</li>
+    <li><strong>信用卡 vs 簽帳卡：</strong>務必用<strong>信用卡（credit card）</strong>。Debit/簽帳金融卡多數公司不收或限制多，押金也卡更緊。</li>
+  </ul>
+</div>
+
+<h2><span class="n">②</span>線上預訂（手把手）</h2>
+<p>美國租車<strong>一定要事先線上訂</strong>（現場現訂又貴又可能沒車）。新手建議：</p>
+
+<h3>在哪裡訂？</h3>
+<ul>
+  <li><strong>比價平台</strong>（先在這裡看行情）：<a href="https://www.costcotravel.com/Rental-Cars" target="_blank" rel="noopener">Costco Travel</a>（常最便宜、含基本保險，需 Costco 會員）、Expedia、Kayak、<a href="https://www.rentalcars.com/" target="_blank" rel="noopener">rentalcars.com</a>、AutoEurope。</li>
+  <li><strong>租車公司官網</strong>（比完價可回官網訂，改期/客服較直接）：Enterprise、Alamo、National、Hertz、Avis、Budget、Dollar、Thrifty。<span class="small">新手友善度：Enterprise / Alamo 評價普遍親切。</span></li>
+</ul>
+
+<h3>預訂時要填 / 要選的欄位</h3>
+<ol>
+  <li><strong>取車地點：</strong>選「Phoenix Sky Harbor Airport (PHX)」。還車同地點（你是來回同點，無單程費）。</li>
+  <li><strong>取車/還車日期時間：</strong>取車時間抓比落地<strong>晚 1.5–2 小時</strong>（等提行李+搭電車）；還車時間抓比班機<strong>早 2.5–3 小時</strong>。</li>
+  <li><strong>車型 Class：</strong>3 人 + 行李建議選 <strong>Intermediate/Midsize（中型房車）或 Compact SUV</strong>，見下表。</li>
+  <li><strong>付款方式：</strong>新手選「<strong>Pay at counter / 現場付（多半免費取消）</strong>」，不要選「Pay now 先付不可退」——萬一行程變動才有彈性。</li>
+  <li><strong>額外駕駛（Additional driver）：</strong>若有第二人要輪流開，現在或櫃台<strong>務必登記</strong>（未登記的人開車出事不理賠）。</li>
+  <li>訂完<strong>記下 Confirmation Number（預訂確認碼）</strong>，截圖存手機。</li>
+</ol>
+
+<h3>車型對照</h3>
+<table>
+  <tr><th>等級</th><th>代表車</th><th>適合</th></tr>
+  <tr><td>Economy / Compact</td><td>Corolla、Versa 級</td><td>最省；3 人 + 小行李勉強夠</td></tr>
+  <tr><td><b>Intermediate / Midsize</b></td><td>Sentra、Altima 級</td><td><b>推薦</b>：長途舒適、後廂放得下</td></tr>
+  <tr><td>Compact SUV</td><td>RAV4、CR-V 級</td><td>視野好、好放行李，貴一點</td></tr>
+</table>
+<p class="small">美國租車幾乎都是<strong>自排（automatic）</strong>、汽油車，免擔心手排。</p>
+
+<h2><span class="n">③</span>看懂保險（新手最怕的一關）</h2>
+<p>租車報價的「車租」不含保險，保險是<strong>另外加購</strong>。常見四種：</p>
+<table>
+  <tr><th>保險</th><th>保什麼</th><th>新手建議</th></tr>
+  <tr><td><b>CDW / LDW</b> 車體損失免責</td><td>租的車被撞/刮/偷，免除你的賠償責任</td><td><b>強烈建議買</b></td></tr>
+  <tr><td><b>Liability（SLI/LIS）</b> 第三責任險</td><td>撞到別人車/人的賠償</td><td><b>建議買</b></td></tr>
+  <tr><td>PAI 人身意外</td><td>車上人員醫療</td><td>有旅平險可省</td></tr>
+  <tr><td>PEC 個人財物</td><td>車內物品失竊</td><td>可省</td></tr>
+</table>
+
+<div class="callout good">
+  <span class="tag">給第一次租車的人：最省心的做法</span>
+  你第一次租、人生地不熟，<strong>建議直接買「CDW + 第三責任險」（很多平台合稱 Full Protection / Full Coverage）</strong>。雖然比較貴（一天約 +$15–35），但萬一刮到撞到，<strong>0 自負額、不用跟保險公司來回扯</strong>，最安心。出國玩，這筆錢值得。
+</div>
+
+<div class="callout">
+  <span class="tag acc">想省這筆？先查你的信用卡</span>
+  不少台灣<strong>Visa 金卡 / 御璽卡以上</strong>附「海外租車碰撞損失險（CDW）」，若有就可能不必重複買 CDW。但：①要事先打電話跟發卡行確認涵蓋範圍與理賠方式 ②理賠是「<strong>先自己墊、回台再申請</strong>」，流程較麻煩。新手嫌煩就直接在櫃台買，省事。
+</div>
+
+<h2><span class="n">④</span>機場取車當天流程（鳳凰城 PHX 專屬）</h2>
+<p>PHX 的租車公司不在航廈裡，集中在一棟獨立的「<strong>Rental Car Center 租車中心</strong>」，要搭<strong>免費電車 PHX Sky Train</strong> 過去（24 小時、3–5 分一班、車程 5–7 分鐘）。</p>
+
+<div class="step"><div class="dot">1</div><div class="body"><b>下機 → 提領行李</b><span class="hint">先到行李轉盤拿托運行李。</span></div></div>
+<div class="step"><div class="dot">2</div><div class="body"><b>找「PHX Sky Train / Rental Car Center」指標</b><span class="hint">航廈內到處有頭頂指標，跟著走到 Sky Train 月台。</span></div></div>
+<div class="step"><div class="dot">3</div><div class="body"><b>搭免費 Sky Train 到 Rental Car Center 站</b><span class="hint">終點直接是租車中心大廳，免費、不用買票。</span></div></div>
+<div class="step"><div class="dot">4</div><div class="body"><b>找到你預訂那家公司的櫃台</b><span class="hint">大廳裡各家櫃台並排，看招牌找你訂的那家。</span></div></div>
+<div class="step"><div class="dot">5</div><div class="body"><b>櫃台辦理：出示「預訂碼 + 護照 + 台灣駕照 + 國際駕照 + 本人信用卡」</b><span class="hint">櫃台人員會核對、刷押金、確認保險與額外駕駛。</span></div></div>
+<div class="step"><div class="dot">6</div><div class="body"><b>面對推銷，冷靜應對（見下方話術）</b><span class="hint">會推銷升級、加保、預付油、ETC——只買你需要的。</span></div></div>
+<div class="step"><div class="dot">7</div><div class="body"><b>簽約、拿鑰匙與車位號</b><span class="hint">有些公司給你一個區域，可自選同級車。</span></div></div>
+<div class="step"><div class="dot">8</div><div class="body"><b>取車前「繞車一圈拍照存證」（超重要）</b><span class="hint">車身四面、所有刮痕凹痕、油表、里程數，全部拍照/錄影。避免還車被賴。確認油是滿的。</span></div></div>
+<div class="step"><div class="dot">9</div><div class="body"><b>開走前花 5 分鐘熟悉車</b><span class="hint">調座椅後視鏡、找大燈/雨刷/方向燈、看儀表板油箱圖示的小箭頭（指向加油孔在左還右）、繞停車場開一圈再上路。</span></div></div>
+
+<div class="callout warn">
+  <span class="tag">櫃台推銷應對話術</span>
+  <ul style="margin:6px 0">
+    <li>升級車輛 → 不需要就說：<em>"No thank you, I'll keep my reserved car."</em></li>
+    <li>加保（你已決定的除外）→ <em>"No additional insurance, thanks."</em></li>
+    <li>預付油（Prepaid fuel / Fuel Purchase Option）→ <strong>千萬別買</strong>：<em>"No prepaid fuel, I'll return it full."</em>（用不完不退錢）</li>
+    <li>收費道路感應器 ETC / toll pass → 此趟（PHX↔Page）<strong>全程無收費站</strong>，不需要。</li>
+  </ul>
+</div>
+
+<h2><span class="n">⑤</span>開車途中提醒</h2>
+<h3>跟台灣不一樣的駕駛規則</h3>
+<ul>
+  <li><strong>靠右行駛</strong>；方向燈撥桿在<strong>左</strong>、雨刷在<strong>右</strong>（剛開常按錯，會開到雨刷別緊張）。</li>
+  <li><strong>紅燈可右轉</strong>（先停穩、確認無來車與行人；除非路口標示 "No Turn on Red"）。</li>
+  <li><strong>四向停 STOP（4-way stop）：</strong>每個方向都要完全停穩，<strong>先到先走</strong>，輪流通過。</li>
+  <li><strong>校車閃紅燈伸出停止臂 → 後方與對向都要停車</strong>，等它收起再走（違規重罰）。</li>
+  <li>速限單位是 <strong>英里 mph</strong>（州際公路常 75 mph ≈ 120 km/h）；里程、油量也都英制。</li>
+</ul>
+
+<h3>加油（外國卡的最大雷）</h3>
+<div class="callout bad">
+  <span class="tag">⚠️ 加油機刷外國信用卡常失敗</span>
+  美國加油機會要求輸入「<strong>美國 ZIP code 郵遞區號</strong>」，台灣卡沒有、常刷不過。<strong>解法：進加油站商店裡，跟店員說要加幾號泵（"Pump number X"），請他先預刷你的卡或直接付現</strong>，加完再結清。是自助加油，自己拿油槍加（汽油選 "Regular / 87" 即可）。
+</div>
+
+<h3>其他</h3>
+<ul>
+  <li><strong>Page 出發前一定加滿油</strong>：往返沿途加油站稀疏、收訊弱。</li>
+  <li>下載<strong>離線地圖</strong>（Google Maps 預先下載該區域），沙漠路段常沒訊號。</li>
+  <li><strong>七月車內高溫可達 60°C+</strong>：別把水以外的東西（巧克力、3C、藥品）留在曝曬的車上；停車用遮陽板。</li>
+  <li><strong>別把貴重物品留在車上</strong>，景點停車場偶有破窗竊案。</li>
+  <li><strong>跨州、進 Navajo 保留地開車都沒問題</strong>，租約允許（此路線在亞利桑那州內）。</li>
+  <li><strong>緊急狀況：</strong>報警/救護打 <strong>911</strong>；車子拋錨打租約上的「<strong>道路救援（Roadside Assistance）</strong>」電話。發生擦撞先確認安全、拍照、跟對方交換保險資訊、通報租車公司，別私下了結。</li>
+</ul>
+
+<h2><span class="n">⑥</span>還車流程</h2>
+<div class="step"><div class="dot">1</div><div class="body"><b>還車前找加油站把油加滿</b><span class="hint">「滿油取、滿油還」最划算；留加油收據備查。沒加滿會被收每加侖數倍的高價油費。</span></div></div>
+<div class="step"><div class="dot">2</div><div class="body"><b>開回 PHX 租車中心的「Car Return / 還車」區</b><span class="hint">跟著 "Rental Car Return" 指標開進去，按地面指示停。</span></div></div>
+<div class="step"><div class="dot">3</div><div class="body"><b>工作人員驗車</b><span class="hint">檢查車身、確認里程與油量。新手可請對方當場確認「無新增損壞」。</span></div></div>
+<div class="step"><div class="dot">4</div><div class="body"><b>拿到收據（最終帳單）</b><span class="hint">當場或 email 收到；核對金額、確認押金會解凍、沒有莫名加收。</span></div></div>
+<div class="step"><div class="dot">5</div><div class="body"><b>搭 Sky Train 回航廈報到</b><span class="hint">同一條免費電車回去。預留班機前 2.5–3 小時，含還車+電車+安檢。</span></div></div>
+
+<h2><span class="n">⑦</span>新手最常踩的 8 個雷（出門前再看一遍）</h2>
+<div class="grid2">
+  <div class="card"><h4>1. 沒帶國際駕照</h4><p class="small">台灣駕照非全英文，沒 IDP 可能被拒租。出發前監理站辦。</p></div>
+  <div class="card"><h4>2. 加油機刷不過</h4><p class="small">要美國 ZIP code。進店裡找店員預刷或付現。</p></div>
+  <div class="card"><h4>3. 還車沒加滿油</h4><p class="small">被收高價油費。還車前最後一站先加滿、留收據。</p></div>
+  <div class="card"><h4>4. 沒拍取車照</h4><p class="small">被賴原有刮痕。取車前車身四面+油表+里程全拍。</p></div>
+  <div class="card"><h4>5. 買了預付油</h4><p class="small">用不完不退。一律拒絕 Prepaid Fuel。</p></div>
+  <div class="card"><h4>6. 額外駕駛沒登記</h4><p class="small">沒登記的人開車出事不理賠。櫃台一定登記。</p></div>
+  <div class="card"><h4>7. 用簽帳卡（debit）</h4><p class="small">多數不收/卡更緊。用本人信用卡。</p></div>
+  <div class="card"><h4>8. 押金以為被扣款</h4><p class="small">那是「凍結預授權」，還車無糾紛會解凍，留足額度即可。</p></div>
+</div>
+
+<h2><span class="n">⑧</span>取車當天「隨身清單」</h2>
+<ul class="chk">
+  <li>台灣駕照正本</li>
+  <li>國際駕照 IDP</li>
+  <li>護照</li>
+  <li>本人信用卡（額度留 ≥ $500）</li>
+  <li>預訂確認碼（截圖）</li>
+  <li>已下載離線地圖 + 充飽的手機 + 車充</li>
+  <li>第一桶飲水（七月落地就會用到）</li>
+</ul>
+
+<footer>
+  美國租車新手手冊 · 鳳凰城機場 PHX · 製表 2026-06-29<br>
+  流程與規定查證於 2026-06，實際以各租車公司與機場官網即時資訊為準。
+</footer>
+
+</div>
+</body>
+</html>
