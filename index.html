@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>鳳凰城 → 大峽谷 → 羚羊谷 → 馬蹄灣 當天來回行程指南</title>
+<style>
+:root{
+  --bg:#ffffff; --surface:#faf8f4; --surface2:#f1ece3;
+  --text:#1f2328; --soft:#4a4f55; --mute:#7a8088;
+  --border:#e6e0d6; --rule:#c9a227;
+  --accent:#9a3412; --accent-soft:#fdecdf;
+  --good:#15803d; --warn:#b45309; --bad:#991b1b;
+  --warn-bg:#fef6e7; --bad-bg:#fdeaea; --good-bg:#eaf6ee;
+}
+[data-theme="dark"]{
+  --bg:#15120e; --surface:#1e1a15; --surface2:#272118;
+  --text:#f3ece2; --soft:#cabfb0; --mute:#9a8f80;
+  --border:#352c20; --rule:#d4a946;
+  --accent:#f97316; --accent-soft:#3a2414;
+  --good:#4ade80; --warn:#fbbf24; --bad:#f87171;
+  --warn-bg:#2d2410; --bad-bg:#311616; --good-bg:#13241a;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);
+  font-family:-apple-system,"PingFang TC","Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif;
+  line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased}
+.wrap{max-width:880px;margin:0 auto;padding:0 22px 80px}
+.theme-toggle{position:fixed;top:14px;right:14px;z-index:100;background:var(--surface2);
+  border:1px solid var(--border);border-radius:8px;padding:7px 13px;cursor:pointer;
+  color:var(--text);font-size:13px}
+.theme-toggle:hover{border-color:var(--accent)}
+header{padding:40px 0 18px;border-bottom:2px solid var(--text);margin-bottom:8px}
+.eyebrow{font-size:12px;letter-spacing:.18em;color:var(--mute);text-transform:uppercase;margin-bottom:10px}
+h1{font-family:Georgia,"Noto Serif TC",serif;font-size:32px;line-height:1.2;margin:0 0 12px;font-weight:700}
+.meta{font-size:13.5px;color:var(--soft)}
+.meta b{color:var(--text)}
+h2{font-family:Georgia,"Noto Serif TC",serif;font-size:23px;margin:46px 0 6px;padding-bottom:8px;
+  border-bottom:1px solid var(--border)}
+h2 .n{color:var(--rule);font-size:16px;margin-right:8px;font-family:Georgia,serif}
+h3{font-size:17px;margin:26px 0 6px;color:var(--accent)}
+p{margin:10px 0}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--rule)}
+a:hover{background:var(--accent-soft)}
+.lead{font-size:16.5px;color:var(--soft)}
+ul{margin:10px 0;padding-left:22px}
+li{margin:6px 0}
+strong{color:var(--text)}
+.callout{border-left:4px solid var(--accent);background:var(--surface);
+  padding:13px 16px;border-radius:0 8px 8px 0;margin:16px 0;font-size:14.5px}
+.warn{border-left:4px solid var(--warn);background:var(--warn-bg)}
+.bad{border-left:4px solid var(--bad);background:var(--bad-bg)}
+.good{border-left:4px solid var(--good);background:var(--good-bg)}
+.callout .tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.05em;
+  text-transform:uppercase;margin-bottom:4px}
+.warn .tag{color:var(--warn)} .bad .tag{color:var(--bad)} .good .tag{color:var(--good)}
+.callout .tag.acc{color:var(--accent)}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{text-align:left;padding:9px 11px;border-bottom:1px solid var(--border);vertical-align:top}
+th{background:var(--surface2);font-size:12.5px;letter-spacing:.03em;color:var(--soft)}
+td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.total td{border-top:2px solid var(--text);font-weight:700;background:var(--surface)}
+.tl{margin:14px 0}
+.tl .row{display:grid;grid-template-columns:88px 1fr;gap:12px;padding:9px 0;border-bottom:1px dotted var(--border)}
+.tl .row.anchor{background:var(--accent-soft);border-radius:8px;padding:9px 10px}
+.tl .time{font-variant-numeric:tabular-nums;font-size:14px;color:var(--accent);font-weight:700}
+.tl .what{font-size:14.5px}
+.tl .what .hint{display:block;font-size:12.5px;color:var(--mute);margin-top:2px}
+.tl .what .badge{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.04em;
+  background:var(--accent);color:#fff;padding:1px 7px;border-radius:10px;margin-left:6px;vertical-align:middle}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}
+.card{border:1px solid var(--border);border-radius:10px;padding:14px 16px;background:var(--surface)}
+.card h4{margin:0 0 6px;font-size:15px}
+.chk{list-style:none;padding-left:0}
+.chk li{padding-left:26px;position:relative}
+.chk li:before{content:"☐";position:absolute;left:0;color:var(--accent);font-size:15px}
+.small{font-size:12.5px;color:var(--mute)}
+footer{margin-top:50px;padding-top:16px;border-top:1px solid var(--border);font-size:12.5px;color:var(--mute)}
+@media (max-width:560px){.grid2{grid-template-columns:1fr}h1{font-size:25px}.tl .row{grid-template-columns:74px 1fr}}
+@media print{.theme-toggle{display:none}}
+</style>
+</head>
+<body data-theme="light">
+<button class="theme-toggle" onclick="document.body.dataset.theme = document.body.dataset.theme === 'dark' ? 'light' : 'dark'">🌓 切換主題</button>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow">Arizona 當天來回 · 3 人 · 自駕 · 七月初</div>
+  <h1>大峽谷 → 羚羊谷 → 馬蹄灣<br>當天來回行程指南</h1>
+  <div class="meta">
+    <b>起點</b>鳳凰城（已在當地、車已租好）&nbsp;|&nbsp;
+    <b>固定錨點</b>羚羊谷導覽 <b>15:15</b>（已預訂）&nbsp;|&nbsp;
+    <b>順序</b>大峽谷 → 羚羊谷 → 馬蹄灣 → 回程
+  </div>
+</header>
+
+<p class="lead">整趟以你已訂的 <strong>15:15 羚羊谷</strong> 為時間軸往前往後排。大峽谷走「南口進、東口 Desert View 出」順路接 89 號公路到 Page，不走回頭路。先看下面三個必讀提醒——這趟最大的挑戰不是路線，是<strong>「一天 ~18 小時、深夜開車回程」的體力與安全</strong>。</p>
+
+<div class="callout bad">
+  <span class="tag">⚠️ 必讀 ① — 這是 ~18 小時、開車 ~10 小時的硬行程</span>
+  因為 15:15 的團 + 馬蹄灣 + 回程 4.5 小時是固定的，<strong>深夜（約 23:00）開車回到鳳凰城躲不掉</strong>。<br>
+  → <strong>強烈建議：兩人輪流開、備咖啡因、夜間提防鹿/麋鹿橫越公路。</strong>若覺得太硬，認真考慮在 Page 過一晚再回。
+</div>
+
+<div class="callout warn">
+  <span class="tag">⚠️ 必讀 ② — 15:15 正逢七月午後雷雨高峰，且當天來回無補位緩衝</span>
+  羚羊谷遇暴洪威脅會臨時取消。<strong>當天早上務必查 Page 天氣、並先確認你訂的團「取消/退費政策」</strong>。萬一被取消，當天無法改期（要趕回鳳凰城）——備案：改去馬蹄灣 + 現場走 Lower Antelope 候補。
+</div>
+
+<div class="callout">
+  <span class="tag acc">提醒 ③ — 15:15 在七月已過「光束時段」</span>
+  經典光束約在 <strong>10:30–13:30</strong>。15:15 你會看到柔和發光的峽谷壁、但<strong>不會有天降光柱</strong>。若你要的是光束、且還能改訂，建議換中午前的團。
+</div>
+
+<h2><span class="n">①</span>當天時程表（以 15:15 羚羊谷為軸）</h2>
+<p class="small">含大峽谷版本。所有時間為概估，沿途觀景會延後，務必抓緊以準時趕上 15:15。</p>
+<div class="tl">
+  <div class="row"><div class="time">04:30</div><div class="what">鳳凰城出發北上（天未亮）<span class="hint">要清晨出發 → 建議<strong>前一晚先把車取好</strong>，租車中心清晨可能未開或排隊。</span></div></div>
+  <div class="row"><div class="time">~08:00</div><div class="what">抵大峽谷南緣（南口進）<span class="hint">Mather Point / Yavapai Point 觀景；夏季 9:30 前進場可避開排隊長龍。</span></div></div>
+  <div class="row"><div class="time">08:00–11:30</div><div class="what">大峽谷 + 沿 Desert View Drive 東行<span class="hint">邊開邊停觀景點，往東口移動，不走回頭路。</span></div></div>
+  <div class="row"><div class="time">~11:30</div><div class="what">Desert View 瞭望塔（東口出）→ 接 89 號往 Page<span class="hint">東口 → Page 約 2 小時。</span></div></div>
+  <div class="row"><div class="time">~13:30</div><div class="what">抵 Page：午餐 + 把油加滿<span class="hint">Page 之後加油站稀疏，務必滿油。</span></div></div>
+  <div class="row"><div class="time">~14:30</div><div class="what">到羚羊谷報到處<span class="hint">提早 30–45 分鐘報到（導覽團規定，遲到不退費）。</span></div></div>
+  <div class="row anchor"><div class="time">15:15</div><div class="what">羚羊谷導覽團 <span class="badge">已預訂</span><span class="hint">全程約 1–1.5 小時，約 16:45 結束。</span></div></div>
+  <div class="row"><div class="time">~17:00</div><div class="what">馬蹄灣 Horseshoe Bend（離羚羊谷約 15 分）<span class="hint">步行 1.2 mi 來回、全程曝曬；午後較涼、光線漸佳。停車場開到 19:30。</span></div></div>
+  <div class="row"><div class="time">~18:15</div><div class="what">啟程返回鳳凰城（~4.5 小時）<span class="hint">想看日落可待到 ~19:30，但回程會更晚到。</span></div></div>
+  <div class="row"><div class="time">~22:45</div><div class="what">抵鳳凰城<span class="hint">夜間長途駕駛，務必輪流開、勿疲勞硬撐。</span></div></div>
+</div>
+
+<div class="callout good">
+  <span class="tag">想更安全/輕鬆？拿掉大峽谷</span>
+  大峽谷<strong>只影響你的上午</strong>（回程深夜到家是 15:15 鎖定的、跟去不去大峽谷無關）。若拿掉大峽谷：<strong>睡飽、09:00 出發 → 13:30 到 Page</strong>，行程鬆很多，還省下 $250 非居民年票。回程一樣約 23:00 到。
+</div>
+
+<h2><span class="n">②</span>大峽谷實務（順遊重點）</h2>
+<ul>
+  <li><strong>路線：</strong>南口（South Entrance）進、東口（Desert View）出最順路去 Page，不繞回頭。</li>
+  <li><strong>費用（台灣籍 = 非居民）：</strong>閘口逐人付 = $35/車 + $100×3 = <strong>$335</strong>；改買 <strong>$250 非居民年票</strong>（含全車最多 4 人、免加收）較划算。<a href="https://store.usgs.gov/2026-non-resident-annual-pass" target="_blank" rel="noopener">線上購買</a>，存手機或列印。</li>
+  <li><strong>時間：</strong>夏季 9:30–16:00 進場可排隊達 2 小時，<strong>9:30 前抵達</strong>最順。</li>
+  <li><strong>停留約 3.5 小時</strong>就要往 Page 移動，否則趕不上 15:15。觀景重點：Mather Point、Desert View 瞭望塔。</li>
+</ul>
+
+<h2><span class="n">③</span>羚羊谷 & 馬蹄灣</h2>
+<div class="grid2">
+  <div class="card">
+    <h4>羚羊谷 Antelope Canyon（15:15 已訂）</h4>
+    <p class="small">須隨原住民導覽團進入、不能自行進場。<strong>提早 30–45 分到報到處</strong>，遲到不退。防塵、廣角鏡；確認你訂的團對大背包/腳架的規定。導遊小費備現金。</p>
+  </div>
+  <div class="card">
+    <h4>馬蹄灣 Horseshoe Bend</h4>
+    <p class="small">離 Page 約 15 分。停車 <strong>$10/車</strong>（國家公園年票不通用）。步行 1.2 mi 來回、無遮蔭、觀景台無護欄。七月務必<strong>帶足水</strong>、注意安全。</p>
+  </div>
+</div>
+
+<h2><span class="n">④</span>當天預算估算（3 人 · 當天來回 · USD）</h2>
+<p class="small">不過夜（省下住宿）。羚羊谷團費依你實際預訂方案為準。</p>
+<table>
+  <tr><th>項目</th><th class="num">金額（3 人合計）</th><th>說明</th></tr>
+  <tr><td>租車（1–2 天，含機場稅費）</td><td class="num">$80 – 160</td><td>清晨出發建議前一晚取車</td></tr>
+  <tr><td>油資（來回含大峽谷 ~650 mi）</td><td class="num">$80 – 110</td><td>拿掉大峽谷約 ~550 mi、略省</td></tr>
+  <tr><td>大峽谷非居民年票</td><td class="num">$250</td><td>一張含全車最多 4 人（不去則省）</td></tr>
+  <tr><td>羚羊谷導覽 ×3</td><td class="num">依你訂的方案</td><td>下羚羊 ~$70/人；上羚羊 ~$120–155/人</td></tr>
+  <tr><td>馬蹄灣停車</td><td class="num">$10</td><td>每車一次</td></tr>
+  <tr><td>餐食（早/午/晚，3 人）</td><td class="num">$120 – 180</td><td>長日多備路上行動糧</td></tr>
+  <tr><td>水 / 防曬 / 咖啡因 / 雜支</td><td class="num">$40 – 60</td><td>大量瓶裝水（沙漠+長途）</td></tr>
+  <tr class="total"><td>小計（不含羚羊谷團費）</td><td class="num">≈ $580 – 770</td><td>拿掉大峽谷再 −$250 左右</td></tr>
+</table>
+<p class="small">＊匯率以 1 USD ≈ NT$32 概估，僅供量級參考。</p>
+
+<h2><span class="n">⑤</span>七月當天來回必備</h2>
+<div class="grid2">
+  <div class="card">
+    <h4>安全 / 防暑（最重要）</h4>
+    <ul class="chk">
+      <li>第二位可輪流開的駕駛（已登記）</li>
+      <li>每人 2–3 公升以上飲水 + 電解質</li>
+      <li>咖啡因（應付深夜回程）</li>
+      <li>高係數防曬 + 帽子 + 太陽眼鏡</li>
+      <li>車用遮陽板</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h4>行程 / 證件</h4>
+    <ul class="chk">
+      <li>台灣駕照 + 國際駕照 + 護照 + 信用卡</li>
+      <li>羚羊谷預訂確認 + 導遊小費現金</li>
+      <li>大峽谷 $250 年票（若去）存手機</li>
+      <li>離線地圖（沿途收訊弱）</li>
+      <li>出發前查 Page 當日天氣（防暴洪取消）</li>
+      <li>行動電源、車充</li>
+    </ul>
+  </div>
+</div>
+
+<footer>
+  鳳凰城–大峽谷–羚羊谷–馬蹄灣 當天來回指南 · 2026-07 行程 · 製表 2026-06-29<br>
+  價格與規定查證於 2026-06，出發前請以各官網即時資訊為準。租車流程另見「美國租車完全手冊」。
+</footer>
+
+</div>
+</body>
+</html>
